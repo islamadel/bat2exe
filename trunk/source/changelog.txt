@@ -1,0 +1,15 @@
+BAT2EXE Change log
+BAT2EXE.net
+By: Islam Adel
+
+2012-08-08	First Official Release of Version 1.0
+2012-08-09	Updated support of folder paths with spaces
+2012-09-23	Added GUI for selecting Source Folder
+		Added GUI for selecting Target Folder
+		Added Feature to Remember last used Folders
+		Added ability to use .cmd as well as .bat
+		Auto select last modified batch file as default
+		Added maximum retries for selecting source file
+		Bug fix with icon size
+		Bug fix when using spaces in batch file name
+		Bug fix overwrite existing exe in target folder
