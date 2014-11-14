@@ -1,0 +1,70 @@
+Revision: 10
+
+Line	Comment
+
+	Why Removed SRET/TRET?
+
+L10
+L11	Why PATH?
+
+L26
+L27	Why making the the Temp Path "absolute" %TEMP%?
+	Better to keep it relative, dont care where it extracts itself.
+	No need to use %CD%
+	If someone has installed it in program files, then he shoud start it from there.
+	if his version gets outdated, then there is no need use old files as core anymore.
+
+L46	The Config variable defined, is already used by the .ini File
+
+L61	Setting the variable to another variable, would keep it constant. (nat dynamically changed)
+
+L88	using Hints is a good idea. this can be set by setting the Silent/Normal/Verbose Mode as a parameter while executing.
+	These are the typical definitions used. the silent mode, doesn't echo anything. The Verbose mode shows every single action on the screen
+	I would say the Welcome Message saying "This Tool..." belongs to the normal mode.
+
+L106	passing the directory as a parameter is a nice feature, i would extend such parameters to define input and output directory and further options.
+	example: -i="Path\to\Source\Folder" -o="Path\to\output\Folder" -s
+	for example -i defines source and -s for silent or -v for verbose, maybe also -icon="path\to\icon.ico" and -run="path\to\batch\File.bat"
+	or as alternative -config="Path\to\predefined\config.config" (which contains all previous settings)
+	and so on..
+
+L114	Sorry can't follow the target anymore..
+
+L132	Nice Feature to let the user select his file if more than one has been found.
+	I would pop up the File Browser in this case and let him select the file.
+	If it should all stay inside the command window without GUI, them the muliple files, could be displayed in a list, like this:
+
+	1:	file1.bat
+	2:	file2.cmd
+	3:	file3.bat
+	
+	Please type in the corresponding number of ur default file to run.
+	(Here we can run the Choice Command and limit its options to the number of options above
+	or use set /p method and verify the input afterwards.
+	I have done a similar thing before. Here: http://www3.architektur.tu-darmstadt.de/netz/fb15_Kabel.exe
+
+L151	Nice to ask for name // alternatively I would think about making a simple run verion which doesn't require too much interaction and a prefessional version
+	which asks for everything.. I dont know.
+
+L161	Nice warning. Try the choice.exe command for this.
+
+L207	What happens actually, when u delete the icon? I mean what Icon does it get at the end?
+	May be we can just replace the current default icon by the bat2exe icon, as long as the user doesn't specify his custom icon
+
+L250	No need to ask for user interaction, when we talk about icons.. either he defines an icon or he gets a default icon and thats it.
+	He can be just prompted at the beginning if he wants to use an icon or not.
+
+L266	Good to ask again for a .bat Folder
+L327	instead of drag and drop, we can pop the browse.vbs, this is more user friendly.
+
+
+And Finally, I would still keep the maximum error retries, then goto: bye
+goto: thanks and good luck
+exit
+
+
+
+
+
+
+

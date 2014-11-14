@@ -1,0 +1,6 @@
+- add option to use hidcon for hiding cmd
+- remember last path
+- check brackets in folder/file name and other chracters
+- Test Network Path \\
+- Languages Translation
+- use silent / compression / input / output /.. parameters
