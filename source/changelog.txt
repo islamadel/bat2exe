@@ -13,3 +13,4 @@ By: Islam Adel
 		Bug fix with icon size
 		Bug fix when using spaces in batch file name
 		Bug fix overwrite existing exe in target folder
+2015-08-21	Removed ResHacker

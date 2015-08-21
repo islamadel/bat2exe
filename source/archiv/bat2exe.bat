@@ -189,20 +189,13 @@ REM >>%cf% echo ExecuteParameters="%*"
 >>%cf% echo ;!@InstallEnd@!
 REM 3. Create SFX
 copy /y /b "bin\7ZSD_LZMAi.sfx" + %cf% + %sfxa% "%name%.tmp" 2>NUL>NUL
-IF EXIST %cf% (del /q /f %cf%) else (echo %cf% does not exist)
+IF EXIST %cf% del /q /f %cf%
 REM 4. Add icon
 IF DEFINED ikon (
 	echo       Applying icon..
 	REM Start /B /Wait "SFX_Mode" "bin\ResHacker.exe" -addoverwrite "%name%.tmp", "%TF%\%name%.exe", "%WS%\%ficon%", ICONGROUP, 101,
-	REM RESHACKER REPLACEMENT START
-	REM Duplicate Source File
-	copy /y "%name%.tmp" "%name%.icx"
-	REM Create Icon File
-	Start /B /Wait "SFX_Mode" "bin\res.exe" -op:add -src:"%name%.icx" -type:icon -name:NAME -lang:1033 -file:"%WS%\%ficon%"
-	REM Attach icon to Source File
-	copy /b /y "%name%.icx" + "%name%.tmp" "%TF%\%name%.exe"
-	IF EXIST "%name%.icx" DEL /Q /F "%name%.icx"
-	REM RESHACKER REPLACEMENT END
+	Start /B /Wait "SFX_Mode" "bin\res.exe" -op:add -src:"%name%.tmp" -type:icon -name:name -lang:1033 -file:"%WS%\%ficon%"
+	RENAME "%name%.tmp" "%name%.exe"
 	IF EXIST "%name%.tmp" DEL /Q /F "%name%.tmp"
 )
 echo       Reducing file Size..

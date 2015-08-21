@@ -21,7 +21,8 @@ bin\7z.exe
 bin\7ZSD_LZMAi.sfx
 bin\browse.vbs
 bin\choice.exe
-bin\ResHacker.exe
+-[bin\ResHacker.exe]
+bin\res.exe
 bin\upx.exe
 
 ------------------------------------------------------
