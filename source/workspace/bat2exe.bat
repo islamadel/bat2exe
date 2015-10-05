@@ -223,7 +223,7 @@ IF EXIST "%TF%\%name%.exe" (
 	echo.
 	echo       Generated File:
 	echo.
-	echo "%vfile%"
+	echo 	   "%TF%\%name%.exe"
 	echo.
 )
 echo.
@@ -236,7 +236,8 @@ EXIT
 
 :verfile
 set vfile=
-set vfile=%~dp1%~nx1
+rem set vfile=%~dp1%~nx1
+set vfile=%~n1
 GOTO :EOF
 
 :getsize
