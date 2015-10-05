@@ -236,8 +236,7 @@ EXIT
 
 :verfile
 set vfile=
-rem set vfile=%~dp1%~nx1
-set vfile=%~n1
+set vfile=%~dp1%~nx1
 GOTO :EOF
 
 :getsize
