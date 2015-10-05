@@ -223,7 +223,7 @@ IF EXIST "%TF%\%name%.exe" (
 	echo.
 	echo       Generated File:
 	echo.
-	echo "%vfile%"
+	echo 	   "%TF%\%name%.exe"
 	echo.
 )
 echo.
