@@ -1,0 +1,14 @@
+BAT2EXE 1.7
+
+
+BAT2EXE 1.7
+
+Convert any Batch File easily to an Executable
+
+This Tool will help you to convert Batch Files [.bat] or [.cmd]
+including any other Files in a certain Folder
+to an executable [.exe] file package.
+
+Change Log:
+
+Apply icon to SFX
