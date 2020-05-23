@@ -14,3 +14,6 @@ By: Islam Adel
 		Bug fix when using spaces in batch file name
 		Bug fix overwrite existing exe in target folder
 2015-08-21	Removed ResHacker
+2020-05-21 Added command line parameters for silent use, Removed ping to local host, Removed upx compression	
+2020-05-22 No Admin Privileges required, Compatibility Set to Windows 7
+2020-05-23 Apply icon to SFX

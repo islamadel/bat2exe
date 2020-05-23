@@ -1,0 +1,1 @@
+run bat2exe.exe /h for help
