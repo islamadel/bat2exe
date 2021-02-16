@@ -1,8 +1,8 @@
 @echo off
 REM BY ISLAM ADEL
 REM BAT2EXE.NET
-SET VER=1.7
-SET VERd=2020-05-23
+SET VER=1.8
+SET VERd=2021-02-16
 MODE 90,50
 COLOR 9F
 TITLE BAT2EXE V. %VER% - Rel. [%VERd%] By: Islam Adel - http://BAT2EXE.net
@@ -236,15 +236,17 @@ REM >>%cf% echo ExecuteParameters="%*"
 >>%cf% echo ;!@InstallEnd@!
 REM 3. Create SFX
 
+SET sfxfile=7zSD
+
 IF DEFINED ikon (
 	echo       Applying icon..
 	REM https://sourceforge.net/projects/winrun4j/
-	copy /y "bin\7zSD.sfx" "7zSD_icon.sfx"
-	Start /B /Wait "Applying Icon" "bin\RCEDIT.exe" /I "7zSD_icon.sfx" "%WS%\%ficon%"
-	copy /y /b "7zSD_icon.sfx" + %cf% + %sfxa% "%name%.tmp" 2>NUL>NUL
+	copy /y "bin\%sfxfile%.sfx" "%sfxfile%_icon.sfx"
+	Start /B /Wait "Applying Icon" "bin\RCEDIT64.exe" /I "%sfxfile%_icon.sfx" "%WS%\%ficon%"
+	copy /y /b "%sfxfile%_icon.sfx" + %cf% + %sfxa% "%name%.tmp" 2>NUL>NUL
 ) ELSE (
 	echo No .ico File found in Source Folder
-	copy /y /b "bin\7zSD.sfx" + %cf% + %sfxa% "%name%.tmp" 2>NUL>NUL
+	copy /y /b "bin\%sfxfile%.sfx" + %cf% + %sfxa% "%name%.tmp" 2>NUL>NUL
 )
 
 copy /y "%name%.tmp" "%TF%\%name%.exe"
@@ -253,7 +255,7 @@ echo.
 
 IF EXIST "%name%.tmp" DEL /Q /F "%name%.tmp" 2>NUL>NUL
 IF EXIST %sfxa% DEL /Q /F %sfxa% 2>NUL>NUL
-IF EXIST "7zSD_icon.sfx" DEL /Q /F "7zSD_icon.sfx" 2>NUL>NUL
+IF EXIST "%sfxfile%_icon.sfx" DEL /Q /F "%sfxfile%_icon.sfx" 2>NUL>NUL
 
 CALL :verfile "%TF%\%name%.exe"
 IF EXIST "%TF%\%name%.exe" (

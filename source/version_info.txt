@@ -1,0 +1,27 @@
+
+1 VERSIONINFO
+FILEVERSION 1,8,0,0
+PRODUCTVERSION 1,8,0,0
+FILEOS 0x40004
+FILETYPE 0x1
+{
+BLOCK "StringFileInfo"
+{
+	BLOCK "040904B0"
+	{
+		VALUE "CompanyName", "Islam Adel"
+		VALUE "FileDescription", "Created by BAT2EXE.net"
+		VALUE "FileVersion", "1.8"
+		VALUE "InternalName", "bat2exe.exe"
+		VALUE "LegalCopyright", "Islam Adel"
+		VALUE "OriginalFilename", "bat2exe.exe"
+		VALUE "ProductName", "BAT2EXE"
+		VALUE "ProductVersion", "1.8"
+	}
+}
+
+BLOCK "VarFileInfo"
+{
+	VALUE "Translation", 0x0409 0x04B0  
+}
+}

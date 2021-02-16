@@ -17,3 +17,4 @@ By: Islam Adel
 2020-05-21 Added command line parameters for silent use, Removed ping to local host, Removed upx compression	
 2020-05-22 No Admin Privileges required, Compatibility Set to Windows 7
 2020-05-23 Apply icon to SFX
+2021-02-16 Version 1.8 (64-bit)

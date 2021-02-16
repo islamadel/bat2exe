@@ -1,7 +1,7 @@
-BAT2EXE 1.7
+BAT2EXE 1.8 (64-bit)
 
 
-BAT2EXE 1.7
+BAT2EXE 1.8 (64-bit)
 
 Convert any Batch File easily to an Executable
 
@@ -11,4 +11,4 @@ to an executable [.exe] file package.
 
 Change Log:
 
-Apply icon to SFX
+64-bit
