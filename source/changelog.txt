@@ -18,3 +18,5 @@ By: Islam Adel
 2020-05-22 No Admin Privileges required, Compatibility Set to Windows 7
 2020-05-23 Apply icon to SFX
 2021-02-16 Version 1.8 (64-bit)
+2021-02-16 Version 1.9 (64-bit) by Resedit (Not released)
+2020-02-16 Version 2.0 (64-bit) by rcedit-x64.exe

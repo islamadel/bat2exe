@@ -1,7 +1,7 @@
 @echo off
 REM BY ISLAM ADEL
 REM BAT2EXE.NET
-SET VER=1.8
+SET VER=2.0
 SET VERd=2021-02-16
 MODE 90,50
 COLOR 9F
@@ -240,9 +240,8 @@ SET sfxfile=7zSD
 
 IF DEFINED ikon (
 	echo       Applying icon..
-	REM https://sourceforge.net/projects/winrun4j/
 	copy /y "bin\%sfxfile%.sfx" "%sfxfile%_icon.sfx"
-	Start /B /Wait "Applying Icon" "bin\RCEDIT64.exe" /I "%sfxfile%_icon.sfx" "%WS%\%ficon%"
+	Start /B /Wait "Applying Icon" "bin\rcedit-x64.exe" "%sfxfile%_icon.sfx" --set-icon "%WS%\%ficon%"
 	copy /y /b "%sfxfile%_icon.sfx" + %cf% + %sfxa% "%name%.tmp" 2>NUL>NUL
 ) ELSE (
 	echo No .ico File found in Source Folder

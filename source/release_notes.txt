@@ -1,7 +1,7 @@
-BAT2EXE 1.8 (64-bit)
+BAT2EXE 2.0 (64-bit)
 
 
-BAT2EXE 1.8 (64-bit)
+BAT2EXE 2.0 (64-bit)
 
 Convert any Batch File easily to an Executable
 
@@ -11,4 +11,4 @@ to an executable [.exe] file package.
 
 Change Log:
 
-64-bit
+using rcedit-x64.exe instead of RCEDIT64.exe
