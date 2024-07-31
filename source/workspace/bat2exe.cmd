@@ -1,8 +1,8 @@
 @echo off
 REM BY ISLAM ADEL
 REM BAT2EXE.NET
-SET VER=2.0
-SET VERd=2021-02-16
+SET VER=2.1
+SET VERd=2024-07-30
 MODE 90,50
 COLOR 9F
 TITLE BAT2EXE V. %VER% - Rel. [%VERd%] By: Islam Adel - http://BAT2EXE.net
@@ -225,18 +225,23 @@ echo       Creating SFX Installer..
 Rem 2. Create Config File
 SET cf="%temp%\config.txt"
 >%cf% echo ;!@Install@!UTF-8!
-REM RunProgram="%%T\\%fname%"
-REM Directory="%%T"
+REM >>%cf% echo RunProgram="%fname%"
+REM >>%cf% echo Directory="%%%%T"
 >>%cf% echo ExecuteFile="%fname%"
 REM >>%cf% echo ExecuteParameters="%*"
 >>%cf% echo Title="%name%"
+
+REM >>%cf% echo SetEnvironment="strInstall=hidcon:%fname%"
+REM >>%cf% echo RunProgram="%%strInstall%%"
+REM >>%cf% echo RunProgram="%fname%"
+
 >>%cf% echo ExtractTitle="Extracting %name%"
 >>%cf% echo ExtractDialogText="%name%"
 >>%cf% echo GUIFlags="1+4+8+32"
 >>%cf% echo ;!@InstallEnd@!
 REM 3. Create SFX
 
-SET sfxfile=7zSD
+SET sfxfile=7zS2
 
 IF DEFINED ikon (
 	echo       Applying icon..
