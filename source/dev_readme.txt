@@ -38,20 +38,34 @@ Using Rcedit v0.2.0
 rcedit-x64.exe <file.sfx> <parameter>
 
 --application-manifest manifest.xml
-
 --set-icon bat2exe.ico
 --set-version-string CompanyName "Islam Adel"
 --set-version-string FileDescription "Created by BAT2EXE.net"
---set-version-string FileVersion 2.0
+--set-version-string FileVersion 2.1
 --set-version-string InternalName bat2exe.exe
 --set-version-string LegalCopyright "Islam Adel"
 --set-version-string OriginalFilename bat2exe.exe
 --set-version-string ProductName BAT2EXE
---set-version-string ProductVersion 2.0
+--set-version-string ProductVersion 2.1
+--set-file-version 2.1
+--set-product-version 2.1
+------------------------------------------------------
 
---set-file-version 2.0
---set-product-version 2.0
+Example 1:
 
+L:\Downloads\bat2exe-2.1\source\workspace\bin\rcedit-x64.exe L:\Downloads\bat2exe-2.1\source\workspace\bin\7zS2.sfx --application-manifest L:\Downloads\bat2exe-2.1\source\manifest.xml --set-icon L:\Downloads\bat2exe-2.1\source\icons\bat2exe.ico --set-version-string CompanyName "Islam Adel" --set-version-string FileDescription "Created by BAT2EXE.net" --set-version-string FileVersion 2.1 --set-version-string InternalName bat2exe.exe --set-version-string LegalCopyright "Islam Adel" --set-version-string OriginalFilename bat2exe.exe --set-version-string ProductName BAT2EXE --set-version-string ProductVersion 2.1 --set-file-version 2.1 --set-product-version 2.1
+
+Example 2:
+
+L:\Downloads\bat2exe-2.1\source\workspace\bin\rcedit-x64.exe L:\Downloads\bat2exe-2.1\source\workspace\bin\7zS2.sfx --application-manifest L:\Downloads\bat2exe-2.1\source\manifest.xml --set-icon L:\Downloads\bat2exe-2.1\source\icons\bat2exe.ico --set-version-string FileDescription "Created by BAT2EXE.net" --set-version-string FileVersion 2.1 --set-version-string ProductVersion 2.1 --set-file-version 2.1 --set-product-version 2.1 --set-version-string LegalCopyright ""
+
+------------------------------------------------------
+
+Notes:
+
+Exclude:
+
+--set-version-string LegalCopyright "Islam Adel"
 
 ------------------------------------------------------
 
@@ -60,11 +74,11 @@ rcedit-x64.exe <file.sfx> <parameter>
 bat2exe.cmd
 bat2exe.ico
 
-bin\7z.dll
-bin\7z.exe
-bin\7ZSD.sfx
+bin\7z.dll (Source: https://7-zip.de/)
+bin\7z.exe (Source: https://7-zip.de/)
+bin\7ZS2.sfx (Source: https://7-zip.org/a/7z920_extra.7z)
 bin\browse.vbs
 bin\choice.exe
-bin\rcedit-x64.exe
+bin\rcedit-x64.exe (Source: https://github.com/electron/rcedit/)
 
 ------------------------------------------------------
