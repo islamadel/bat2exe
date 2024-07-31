@@ -20,3 +20,6 @@ By: Islam Adel
 2021-02-16 Version 1.8 (64-bit)
 2021-02-16 Version 1.9 (64-bit) by Resedit (Not released)
 2020-02-16 Version 2.0 (64-bit) by rcedit-x64.exe
+2024-07-30 Version 2.1
+			7-Zip 24.07 + 7-zip 9.20 Extras
+			rcedit-x64 V. 2.0.0
