@@ -1,11 +1,14 @@
 @echo off
 REM BY ISLAM ADEL
 REM BAT2EXE.NET
-SET VER=2.1
-SET VERd=2024-07-30
-MODE 90,50
+SET VER=2.2
+SET VERd=2025-03-25
+MODE 90,40
 COLOR 9F
 TITLE BAT2EXE V. %VER% - Rel. [%VERd%] By: Islam Adel - http://BAT2EXE.net
+
+
+
 REM MOVE TO CURRENT DIR
 2>NUL>NUL CD /D %~dp0
 echo.
@@ -219,16 +222,14 @@ SET VFILE=
 echo.
 echo       Compressing Archive..
 Rem 1. Compress Installer Files
+>"%WS%\_created_by_bat2exe.net.txt" ECHO Created by BAT2EXE.net
 Start /B /Wait "Compressing" "bin\7z.exe" a -y %sfxa% "%WS%\*" -x!"%WS%\%ficon%"
+del /q /f "%WS%\_created_by_bat2exe.net.txt"
 echo.
 echo       Creating SFX Installer..
 Rem 2. Create Config File
 SET cf="%temp%\config.txt"
 >%cf% echo ;!@Install@!UTF-8!
-REM >>%cf% echo RunProgram="%fname%"
-REM >>%cf% echo Directory="%%%%T"
->>%cf% echo ExecuteFile="%fname%"
-REM >>%cf% echo ExecuteParameters="%*"
 >>%cf% echo Title="%name%"
 
 REM >>%cf% echo SetEnvironment="strInstall=hidcon:%fname%"
@@ -238,6 +239,10 @@ REM >>%cf% echo RunProgram="%fname%"
 >>%cf% echo ExtractTitle="Extracting %name%"
 >>%cf% echo ExtractDialogText="%name%"
 >>%cf% echo GUIFlags="1+4+8+32"
+REM >>%cf% echo RunProgram="%fname%"
+REM >>%cf% echo Directory="%%%%T"
+>>%cf% echo ExecuteFile="%fname%"
+REM >>%cf% echo ExecuteParameters="%*"
 >>%cf% echo ;!@InstallEnd@!
 REM 3. Create SFX
 
@@ -295,6 +300,8 @@ EXIT
 :name
 set name=%~n1
 set fname=%~nx1
+rem echo name is %name%
+rem echo fname is %fname%
 goto :eof
 
 :icon
