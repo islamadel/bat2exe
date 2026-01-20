@@ -1,9 +1,10 @@
 @echo off
 REM BY ISLAM ADEL
 REM BAT2EXE.NET
-SET VER=2.2
-SET VERd=2025-03-25
-MODE 90,40
+SET VER=2.3
+SET VERd=2026-01-20
+MODE 120,80
+REM mode con: cols=120 lines=80
 COLOR 9F
 TITLE BAT2EXE V. %VER% - Rel. [%VERd%] By: Islam Adel - http://BAT2EXE.net
 
@@ -238,6 +239,7 @@ REM >>%cf% echo RunProgram="%fname%"
 
 >>%cf% echo ExtractTitle="Extracting %name%"
 >>%cf% echo ExtractDialogText="%name%"
+REM https://olegscherbakov.github.io/7zSFX/parameters.html#GUIFlags
 >>%cf% echo GUIFlags="1+4+8+32"
 REM >>%cf% echo RunProgram="%fname%"
 REM >>%cf% echo Directory="%%%%T"
@@ -247,6 +249,10 @@ REM >>%cf% echo ExecuteParameters="%*"
 REM 3. Create SFX
 
 SET sfxfile=7zS2
+
+REM Execute as Invoker // no admin privileges
+REM Start /B /Wait "Execution Level" "bin\rcedit-x64.exe" "bin\%sfxfile%.sfx" --set-requested-execution-level "asInvoker"
+REM Start /B /Wait "Execution Level" "bin\rcedit-x64.exe" "bin\%sfxfile%.sfx" --application-manifest "bin\app.manifest"
 
 IF DEFINED ikon (
 	echo       Applying icon..
